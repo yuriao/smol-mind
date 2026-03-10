@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "smol-mind"
+version = "0.1.0"
+description = "Agent framework that enables small/local LLMs to handle complex tasks step-by-step with sandboxed tool use"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "lujia chen", email = "lujiac1@uci.edu"}]
+requires-python = ">=3.10"
+keywords = ["llm", "agent", "ollama", "local-ai", "small-models", "tool-use"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = []  # Zero dependencies — pure stdlib
+
+[project.optional-dependencies]
+dev = ["pytest", "black", "ruff"]
+
+[project.urls]
+Homepage = "https://github.com/yuriao/smol-mind"
+Repository = "https://github.com/yuriao/smol-mind"
+Issues = "https://github.com/yuriao/smol-mind/issues"
+
+[tool.ruff]
+line-length = 100
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
